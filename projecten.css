@@ -1,0 +1,395 @@
+:root {
+  --primaire-kleur: #211f42;
+  --achtergrond-body: #faf8f4;
+  --logokleur-rood: #ed4b62;
+  --logokleur-blauw: #57c0c8;
+  --logokleur-paars: #855991;
+  --zwart-text: #2d2d2d;
+
+  --font-size-base: clamp(1rem, 0.5vw + 0.875rem, 1.125rem);
+}
+
+.projecten-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1.5rem;
+  padding: 3rem 8rem 6rem 8rem;
+}
+
+.card-1 {
+  grid-column: span 4;
+  background-image: url("./images/banner_achtergrond-01.jpg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 800px auto;
+  transition: background-size 0.4s ease;
+}
+
+.card-2 {
+  grid-column: span 3;
+  background-image: url("./images/banner_achtergrond-01.jpg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 800px auto;
+  transition: background-size 0.4s ease;
+}
+
+.card-3 {
+  grid-column: span 2;
+  background-image: url("./images/banner_achtergrond-01.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 800px auto;
+  transition: background-size 0.4s ease;
+}
+
+.card-4 {
+  grid-column: span 5;
+  background-image: url("./images/banner_achtergrond-01.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 1100px auto;
+  transition: background-size 0.4s ease;
+}
+
+.project-card {
+  background-color: #eaf7ff;
+  padding: 2rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  height: 15rem;
+  min-height: 120px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  gap: 0.6rem;
+  text-decoration: none;
+  color: #ffffff;
+  overflow: hidden;
+
+  & h2 {
+    font-size: clamp(1.5rem, 1.3026rem + 0.7895vw, 2.25rem);
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Quicksand", serif;
+  }
+
+  & small {
+    padding: 0.3rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    font-weight: 200;
+    border: solid 0.3px #ffffff;
+    width: max-content;
+    border-radius: 4px;
+  }
+
+  & .scherm {
+    width: 8rem;
+    position: absolute;
+    bottom: -3px;
+    right: 55px;
+    z-index: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+  }
+
+  & .kleurenwaaier {
+    width: 10rem;
+    position: absolute;
+    top: -20px;
+    right: -10px;
+    z-index: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+    rotate: 100deg;
+  }
+
+  & .penceel {
+    width: 4.7rem;
+    position: absolute;
+    bottom: -7px;
+    right: 15px;
+    z-index: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+  }
+
+  & .lineaal {
+    width: 10rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+    z-index: 0;
+    pointer-events: none;
+    rotate: 50deg;
+    transition: transform 0.3s ease;
+  }
+}
+
+.card-1:hover .scherm {
+  transform: translateY(-4px) scale(1.1);
+}
+
+.card-1:hover {
+  background-size: 110%;
+}
+
+.card-2:hover .kleurenwaaier {
+  transform: translateX(8px) scale(1.06);
+}
+
+.card-2:hover {
+  background-size: 140%;
+}
+
+.card-3:hover .penceel {
+  transform: translateY(-4px) scale(1.1);
+}
+
+.card-3:hover {
+  background-size: 180%;
+}
+
+.card-4:hover .lineaal {
+  transform: translateY(-4px) scale(1.1);
+}
+
+.card-4:hover {
+  background-size: 110%;
+}
+
+.titelProjects {
+  padding: 1rem 8rem 0rem 8rem;
+}
+
+.project-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.titelSubProjecten {
+  padding: 2rem 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  & img {
+    width: 8rem;
+  }
+
+  & h1 {
+    color: #ffffff;
+    font-size: clamp(1.75rem, 4vw + 0.5rem, 3rem);
+    font-family: "Quicksand", serif;
+    font-weight: 700;
+  }
+
+  & a {
+    font-size: clamp(0.75rem, 0.3vw + 0.6rem, 0.875rem);
+  }
+}
+
+.heroProjecten {
+  background-image: url("./images/banner_achtergrond-01.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.navBarProjectenWebdev {
+  padding: 2.6rem 8rem 1rem 8rem;
+}
+
+.navBarProjectenWebdev a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.wrapperWebDev {
+  padding: 3rem 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.navKnopText.active {
+  color: var(--logokleur-blauw);
+  font-weight: 700;
+}
+
+.breadcrumsProjecten {
+  padding: 2rem 8rem 0 8rem;
+
+  & a {
+    color: var(--primaire-kleur);
+    font-size: clamp(0.75rem, 0.3vw + 0.6rem, 0.875rem);
+  }
+}
+
+.overMijSection {
+  padding: 3rem 8rem 2rem 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  & .overMijIntro {
+    display: flex;
+    gap: 2rem;
+
+    & h1 {
+      font-size: clamp(1.75rem, 4vw + 0.5rem, 3rem);
+      font-family: "Quicksand", serif;
+      font-weight: 700;
+      color: var(--primaire-kleur);
+    }
+
+    & div {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      font-size: var(--font-size-base);
+      color: var(--zwart-text);
+    }
+  }
+
+  & .overMijContent {
+    font-size: var(--font-size-base);
+    color: var(--zwart-text);
+    line-height: 1.6;
+    display: flex;
+    gap: 2rem;
+
+    & .fotoBerg {
+      width: 18rem;
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      flex-shrink: 0;
+      align-self: flex-start;
+    }
+
+    & .overMijContentText {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    & div {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+
+  & .profielfoto {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .breadcrumsProjecten {
+    padding: 1rem 1rem 0 1rem;
+
+    & .breadcrumbs {
+      padding: 0;
+    }
+  }
+
+  .projecten-grid {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+
+    & .project-card {
+      height: 12rem;
+    }
+  }
+
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4 {
+    grid-column: span 1;
+
+    & .scherm,
+    .kleurenwaaier,
+    .penceel,
+    .lineaal {
+      display: none;
+    }
+  }
+
+  .overMijSection {
+    padding: 2rem 1rem;
+
+    & .overMijIntro {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      & h1 {
+        font-size: 2rem;
+      }
+
+      & div {
+        text-align: center;
+      }
+    }
+
+    & .overMijContent {
+      flex-direction: column;
+      align-items: center;
+
+      & .fotoBerg {
+        width: 100%;
+        max-width: 18rem;
+        margin-bottom: 1rem;
+        justify-self: center;
+        align-self: center;
+      }
+
+      & .overMijContentText {
+        text-align: center;
+        width: 100%;
+
+        & div {
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+
+    & .profielfoto {
+      width: 12rem;
+      height: 12rem;
+    }
+  }
+
+  .navBarProjectenWebdev {
+    padding: 1rem 1rem;
+  }
+
+  .titelSubProjecten {
+    padding: 1rem 1rem;
+    text-align: center;
+    gap: 2rem;
+
+    & h1 {
+      font-size: 2rem;
+    }
+
+    & img {
+      width: 6rem;
+    }
+  }
+
+  .wrapperWebDev {
+    padding: 2rem 1rem;
+  }
+}

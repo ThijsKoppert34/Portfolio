@@ -1,0 +1,1037 @@
+:root {
+  --primaire-kleur: #211f42;
+  --achtergrond-body: #f2f2f2;
+  --logokleur-rood: #ed4b62;
+  --logokleur-blauw: #57c0c8;
+  --logokleur-paars: #855991;
+  --zwart-text: #2d2d2d;
+
+  --font-size-base: clamp(1rem, 0.5vw + 0.875rem, 1.125rem);
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url(./fonts/Manrope-VariableFont_wght.ttf) format("truetype");
+  font-weight: 50 900;
+}
+
+@font-face {
+  font-family: "SpaceMono";
+  src: url(./fonts/SpaceMono-Regular.ttf) format("truetype");
+  font-weight: 50 900;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url(./fonts/Fraunces-VariableFont_SOFT\WONK\opsz\wght.ttf)
+    format("truetype");
+  font-weight: 50 900;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url(./fonts/Fraunces-Italic-VariableFont_SOFT\WONK\opsz\wght.ttf)
+    format("truetype");
+  font-weight: 50 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url(./fonts/Quicksand-VariableFont_wght.ttf) format("truetype");
+  font-weight: 50 900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--logokleur-blauw);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Manrope", sans-serif;
+  background-color: var(--achtergrond-body);
+  overflow-x: hidden;
+}
+
+/* styling van de nav */
+
+.navHome {
+  background: linear-gradient(
+    to bottom,
+    rgba(33, 31, 66, 1) 0%,
+    rgba(33, 31, 66, 0) 100%
+  );
+  padding: 2.6rem 8rem 0rem 8rem;
+  position: sticky;
+}
+
+.navBarLeerdoelen {
+  background: #211f42;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav li:first-child {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: clamp(0.9rem, 0.4vw + 0.75rem, 1rem);
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--logokleur-blauw);
+}
+
+.githubIcon {
+  height: 35px;
+}
+
+.githubKnop {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  justify-content: center;
+}
+
+.githubKnop:hover .githubIcon {
+  color: var(--logokleur-blauw);
+}
+
+.heroBackground {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  background-image: url("./images/banner_achtergrond-01.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+header,
+.bannerHero {
+  background: transparent;
+}
+
+nav img {
+  height: 50px;
+  transition: 0.8s ease;
+  padding-top: 0.7rem;
+}
+
+.logoKlein {
+  display: none;
+}
+
+/* animatie van de nav */
+
+.githubKnop svg {
+  transition: transform 0.6s ease;
+}
+
+.githubKnop:hover svg {
+  animation: wiggle 0.5s;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(-22deg);
+  }
+  30% {
+    transform: rotate(18deg);
+  }
+  45% {
+    transform: rotate(-14deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-6deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* styling van de body */
+
+.bannerHero {
+  width: 100%;
+  box-sizing: border-box;
+  height: max-content;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem 0rem 3rem 0rem;
+}
+
+.bannerHero h1 {
+  font-weight: 150;
+  font-size: clamp(1.125rem, 0.2039rem + 3.6842vw, 4.625rem);
+  color: #ffffff;
+}
+
+.bannerAchtergrond img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 80vh;
+  z-index: -1;
+}
+
+.bannerButton {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  gap: 0.3rem;
+  position: relative;
+  z-index: 10;
+  margin-top: 2rem;
+}
+
+.textBannerButton {
+  position: relative;
+  font-size: clamp(1rem, 0.6053rem + 1.5789vw, 2.5rem);
+  color: #ffffff;
+  font-weight: 50;
+  cursor: pointer;
+}
+
+.textBannerButton::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.6s ease;
+}
+
+.bannerButton:hover .textBannerButton::after {
+  width: 100%;
+}
+
+.bannerButton svg {
+  height: 3.2rem;
+  transition: transform 0.7s ease;
+}
+
+.bannerButton:hover svg {
+  transform: rotate(404deg);
+}
+
+.word {
+  opacity: 0;
+  display: inline-block;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.word.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contentWrapper {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+
+  gap: 2rem;
+  width: 70vw;
+}
+
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  background-color: var(--achtergrond-body);
+  padding: 2.5rem 8rem;
+  width: 100%;
+}
+
+.afbeeldingWafs {
+  width: 20vw;
+}
+
+a.contentWrapper {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.contentWrapper:visited {
+  color: inherit;
+}
+
+a.contentWrapper:hover .afbeeldingWafs {
+  transform: scale(1.1) rotate(5deg);
+  transition: transform 0.4s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+a.contentWrapper .afbeeldingWafs {
+  transition: transform 0.4s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.mainFooter {
+  height: 10vh;
+  background-color: var(--primaire-kleur);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.bekijkAlles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+  gap: 1rem;
+  text-decoration: none;
+  color: var(--zwart-text);
+  margin: 0rem 8rem 0 0;
+  font-size: clamp(1.125rem, 0.9605rem + 0.6579vw, 1.75rem);
+  font-weight: 300;
+  width: max-content;
+  padding: 0.5rem 0.2rem 1rem 0rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.bekijkAllesP {
+  position: relative;
+}
+
+.bekijkAllesP::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.3rem;
+  width: 0%;
+  height: 2px;
+  background-color: var(--primaire-kleur);
+  transition: width 0.6s ease;
+}
+
+.bekijkAlles:hover .bekijkAllesP::after {
+  width: 100%;
+}
+
+.bekijkAlles svg {
+  height: 30px;
+  width: max-content;
+  stroke: var(--primaire-kleur);
+  transition: transform 0.5s ease;
+}
+
+.bekijkAlles:hover svg {
+  transform: rotate(312deg);
+}
+
+.titelProjecten {
+  font-size: clamp(1.5rem, 1.3026rem + 0.7895vw, 2.25rem);
+  color: var(--primaire-kleur);
+  font-weight: 700;
+  font-family: "Quicksand", serif;
+}
+
+.heroAlles {
+  display: flex;
+  width: 100%;
+  cursor: url("https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg"),
+    auto;
+  padding: 3rem 6rem 0rem 8rem;
+  align-items: stretch;
+}
+
+.fotoVanMij {
+  display: flex;
+  align-items: flex-end;
+  flex: 1;
+}
+
+.fotoVanMij img {
+  width: 25vw;
+}
+
+.textBlok {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.textBlok h3 {
+  width: max-content;
+  padding: 0.3rem;
+  border-radius: 8px;
+  color: var(--primaire-kleur);
+  font-weight: 100;
+  border: 0.5px solid var(--primaire-kleur);
+}
+
+.textBlok span {
+  padding-top: 0.2rem;
+  position: relative;
+  width: max-content;
+  font-weight: 100;
+}
+
+.textBlok span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 1.4px;
+  background-color: var(--primaire-kleur);
+  transition: width 0.5s;
+}
+
+.contentWrapper:hover span::after {
+  width: 100%;
+}
+
+.contentWrapper {
+  cursor: pointer;
+}
+
+.textBlok p {
+  font-size: var(--font-size-base);
+  color: var(--zwart-text);
+  font-weight: 200;
+}
+
+/* ///////////////////////
+-----PROJECTEN PAGINA-----
+/////////////////////// */
+
+.navBarProjecten {
+  padding: 2.6rem 8rem 0rem 8rem;
+}
+.navBarProjecten a {
+  color: var(--primaire-kleur);
+}
+
+.contentWrapperProject {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.contentWrapperProject img {
+  width: 30vw;
+  border-radius: 4px;
+}
+
+.textBlokProject {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 0.4rem;
+}
+
+.textBlokProject h3 {
+  width: max-content;
+  font-size: clamp(0.75rem, 0.5526rem + 0.7895vw, 1.5rem);
+  padding: 0.3rem;
+  border-radius: 8px;
+  color: var(--primaire-kleur);
+  font-weight: 100;
+  border: 0.5px solid var(--primaire-kleur);
+}
+
+.textBlokProject p {
+  font-size: clamp(0.75rem, 0.4211rem + 1.3158vw, 2rem);
+  color: var(--zwart-text);
+  font-weight: 200;
+}
+
+.textBlokProjectR {
+  text-align: right;
+}
+
+.textBlokProjectR p {
+  font-size: clamp(0.75rem, 0.4211rem + 1.3158vw, 2rem);
+  color: var(--zwart-text);
+  font-weight: 200;
+}
+
+.textBlokProjectR h3 {
+  align-self: flex-end;
+  padding: 0.3rem;
+  border-radius: 8px;
+  font-size: clamp(0.75rem, 0.5526rem + 0.7895vw, 1.5rem);
+  color: var(--primaire-kleur);
+  font-weight: 100;
+  border: 0.5px solid var(--primaire-kleur);
+}
+
+.textBlokProjectR {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 0.4rem;
+}
+
+.contentBoxProject {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  background-color: var(--achtergrond-body);
+  padding: 2.5rem 8rem 4rem 8rem;
+  width: 100%;
+}
+
+.cijferGroen {
+  color: green;
+  font-weight: bold;
+}
+
+.cijferOranje {
+  color: rgb(255, 161, 20);
+  font-weight: bold;
+}
+
+.cijferPaars {
+  color: var(--logokleur-paars);
+  font-weight: 500;
+}
+
+.contentWrapperProject a {
+  position: relative;
+  font-family: "SpaceMono";
+  width: max-content;
+  display: inline-block;
+  color: var(--primaire-kleur);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.textBlokProjectR a {
+  align-self: flex-end;
+}
+
+.contentWrapperProject a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 1px;
+  background-color: var(--primaire-kleur);
+  transition: width 0.4s;
+}
+
+.contentWrapperProject a:hover::after {
+  width: 100%;
+}
+
+.contentWrapperProject small {
+  font-size: clamp(0.75rem, 0.6513rem + 0.3947vw, 1.125rem);
+  color: var(--zwart-text);
+  font-weight: 100;
+}
+
+/* ///////////////////////
+-----NERDS PAGINA-----
+/////////////////////// */
+
+.allNerds {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 8rem;
+  width: 100%;
+}
+
+.nerdWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  border-radius: 0.5rem;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.nerdWrapper svg {
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+.wrapperDicht {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+}
+
+.nerdDicht {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  font-size: clamp(0.75rem, 0.4211rem + 1.3158vw, 2rem);
+  color: var(--zwart-text);
+  transition: background 0.3s;
+  width: 100%;
+  background-color: #e9e9e9;
+  border: none;
+  border-radius: 6px 6px 0 0;
+  padding: 1rem;
+}
+
+.nerdDicht div {
+  text-align: left;
+}
+
+.nerdDicht h3 {
+  font-size: clamp(0.875rem, 0.6447rem + 0.9211vw, 1.75rem);
+  color: var(--zwart-text);
+  font-weight: 200;
+}
+
+.nerdDicht small {
+  font-size: clamp(0.875rem, 0.7763rem + 0.3947vw, 1.25rem);
+  color: var(--zwart-text);
+  font-weight: 200;
+}
+
+.openEen,
+.openTwee,
+.openDrie {
+  font-size: clamp(0.75rem, 0.6842rem + 0.2632vw, 1rem);
+  padding-left: 1rem;
+}
+
+.textLinks {
+  min-width: 6rem;
+}
+
+.nerdOpen {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  margin-left: 128px;
+  background-color: #e9e9e9;
+  border-radius: 0 0 6px 6px;
+  padding: 0 0.5rem 0 0.5rem;
+}
+
+.nerdToggle:checked ~ .nerdOpen {
+  max-height: 1000px;
+}
+
+.nerdToggle:checked + label .bi-chevron-down {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.nerdWrapper:has(.nerdToggle:checked) .nerdOpen {
+  padding-bottom: 1rem;
+}
+
+.nerdWrapper:has(.nerdToggle:checked) .textLinks p {
+  font-weight: bold;
+  color: var(--logokleur-paars);
+}
+
+.nerdWrapper:has(.nerdToggle:checked) .nerdDicht,
+.nerdWrapper:has(.nerdToggle:checked) .nerdOpen {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  background-color: white;
+}
+
+.captionNerds {
+  align-self: flex-start;
+  font-size: clamp(0.75rem, 0.4211rem + 1.3158vw, 2rem);
+  color: var(--zwart-text);
+  font-weight: 400;
+  padding: 1.5rem 9rem 1.5rem 9rem;
+}
+
+/* ///////////////////////
+-----LEERDOELEN PAGINA-----
+/////////////////////// */
+
+.doelenWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 8rem;
+  width: 100%;
+  gap: 2rem;
+  font-size: clamp(0.75rem, 0.6842rem + 0.2632vw, 1rem);
+}
+
+.leerdoel {
+  display: flex;
+  gap: 0.4rem;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  background-color: #e9e9e9;
+  border-radius: 8px;
+  padding: 0.9rem;
+  width: 100%;
+}
+
+.leerdoel h2 {
+  font-size: clamp(0.75rem, 0.4211rem + 1.3158vw, 2rem);
+  color: var(--zwart-text);
+  font-weight: 600;
+}
+
+.leerdoel h3 {
+  color: #ed4b62;
+  font-weight: 400;
+  width: max-content;
+  border-radius: 4px;
+  padding: 0.3rem;
+  border: #ed4b62 1px solid;
+  font-size: clamp(0.75rem, 0.6842rem + 0.2632vw, 1rem);
+}
+
+.openTwee ul {
+  padding-left: 1.5em;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+.leerdoel p {
+  color: var(--zwart-text);
+  font-weight: 400;
+}
+
+.titelLeerdoelen,
+.titelReflectie,
+.captionNerds {
+  font-size: clamp(1.75rem, 1.4539rem + 1.1842vw, 2.875rem);
+  color: var(--zwart-text);
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-align: left;
+  margin-left: 0;
+  align-self: flex-start;
+}
+
+.titelReflectie {
+  padding: 0 8rem 2rem 8rem;
+}
+
+.navBarLeerdoelen {
+  background: #211f42;
+  padding: 1rem 8rem;
+}
+
+.reflectieWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  padding: 0 8rem 6rem 8rem;
+  width: 100%;
+  height: max-content;
+}
+
+.reflectieWrapper > div {
+  background: #e9e9e9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  border-radius: 8px;
+  gap: 0.4rem;
+  padding: 0.9rem;
+  height: max-content;
+  justify-content: space-between;
+}
+
+.reflectieWrapper > div h2 {
+  font-size: clamp(0.75rem, 0.4211rem + 1.3158vw, 2rem);
+  color: var(--zwart-text);
+  font-weight: 600;
+}
+
+.flexWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+@keyframes shinyShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.openExtra {
+  align-self: flex-end;
+  margin-top: auto;
+  font-weight: 300;
+  font-size: clamp(0.5rem, 0.3684rem + 0.5263vw, 1rem);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(
+    270deg,
+    var(--primaire-kleur),
+    var(--logokleur-rood),
+    var(--logokleur-blauw),
+    var(--logokleur-paars),
+    var(--primaire-kleur)
+  );
+  background-size: 400% 400%;
+  animation: shinyShift 6s ease infinite;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.openExtra:hover {
+  box-shadow: 0 2px 12px rgba(33, 31, 66, 0.6);
+}
+.reflectieWrapper .reflectieMeesterproef h3 {
+  color: #ed4b62;
+  border: #ed4b62 1px solid;
+}
+.reflectieWrapper .reflectieWeeklynerds h3,
+.reflectieWrapper .reflectieVakken h3 {
+  color: #57c0c8;
+  border: #57c0c8 1px solid;
+}
+.reflectieWrapper .reflectieLeerdoelen h3 {
+  color: #855991;
+  border: #855991 1px solid;
+}
+
+.reflectieWrapper > div h3 {
+  font-weight: 400;
+  width: max-content;
+  border-radius: 4px;
+  padding: 0.3rem;
+  font-size: clamp(0.75rem, 0.6842rem + 0.2632vw, 1rem);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.contentOpen {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  margin: 2rem 8rem;
+  gap: 1rem;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 2rem;
+  width: 90%;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#css,
+#bt,
+#wafs {
+  scroll-margin-top: 100px;
+}
+
+.contentOpen p {
+  font-size: clamp(0.75rem, 0.6513rem + 0.3947vw, 1.125rem);
+}
+
+.titelMeesterproef {
+  font-size: clamp(1.625rem, 1.4934rem + 0.5263vw, 2.125rem);
+  color: var(--zwart-text);
+  font-weight: 200;
+}
+
+.strongGroen {
+  color: var(--logokleur-blauw);
+}
+
+.strongPaars {
+  color: var(--logokleur-paars);
+}
+
+.strongRood {
+  color: var(--logokleur-rood);
+}
+
+.sluitExtra {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.reflectieLeerdoelen .contentOpen ul {
+  padding-left: 2rem;
+  font-size: clamp(0.75rem, 0.6513rem + 0.3947vw, 1.125rem);
+}
+
+.hidden {
+  display: none;
+}
+
+/* ///////////////////////
+-----MEDIA QUERIES-----
+/////////////////////// */
+
+@media (max-width: 700px) {
+  .logoGroot {
+    display: none;
+  }
+
+  .navHome {
+    padding: 1rem 1rem;
+  }
+
+  .contentWrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    & .textBlok {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .logoKlein {
+    display: block;
+  }
+
+  .logoKlein img {
+    height: 30px;
+  }
+
+  .contentBoxProject {
+    padding: 1.5rem 1rem;
+  }
+
+  .titelReflectie {
+    padding: 0 1rem 0 1rem;
+  }
+
+  .textLinks {
+    display: none;
+  }
+
+  .contentBox {
+    padding: 1rem 1rem;
+  }
+
+  .reflectieWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding: 1rem 1em;
+  }
+
+  .navBarProjecten {
+    padding: 1rem 0.3rem;
+  }
+
+  .navBarLeerdoelen {
+    padding: 1rem 0.3rem;
+  }
+
+  nav {
+    padding: 1rem 1rem;
+  }
+
+  nav ul {
+    flex-wrap: nowrap;
+  }
+
+  .heroAlles {
+    padding: 1rem 2rem;
+  }
+
+  .contentOpen {
+    margin: 1rem 1rem;
+  }
+
+  .nerdOpen {
+    margin-left: 0;
+  }
+
+  .captionNerds {
+    padding: 1rem 1rem;
+  }
+
+  .fotoVanMij img {
+    display: none;
+  }
+
+  .allNerds {
+    padding: 1rem 1rem;
+  }
+
+  .doelenWrapper {
+    padding: 1rem 1rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .bekijkAlles {
+    margin: 0.5rem 12rem 0rem 0rem;
+  }
+}
