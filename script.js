@@ -1,28 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const h1 = document.getElementById("animatieTekst");
-  const content = h1.innerHTML;
+  const woorden = document.querySelectorAll("#animatieTekst span");
 
-  // splits op woorden én behoud witruimtes en <br>
-  const parts = content.split(/(<br\s*\/?>|\s+)/g);
+  woorden.forEach((woord, i) => {
+    woord.style.opacity = 0;
+    woord.style.display = "inline-block";
+    woord.style.transform = "translateY(10px)";
+    woord.style.transition = "opacity 0.4s ease, transform 0.4s ease";
 
-  h1.innerHTML = "";
-
-  parts.forEach((part, index) => {
-    if (part.match(/^<br\s*\/?>$/i)) {
-      h1.appendChild(document.createElement("br"));
-    } else if (part.trim() === "") {
-      // voeg witruimte toe als tekstnode
-      h1.appendChild(document.createTextNode(part));
-    } else {
-      const span = document.createElement("span");
-      span.className = "word";
-      span.textContent = part;
-      h1.appendChild(span);
-
-      setTimeout(() => {
-        span.classList.add("visible");
-      }, index * 150);
-    }
+    setTimeout(() => {
+      woord.style.opacity = 1;
+      woord.style.transform = "translateY(0)";
+    }, i * 300); // 0.3s tussen elk woord
   });
 });
 

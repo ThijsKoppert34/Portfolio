@@ -59,13 +59,15 @@
 
       <div class="heroAlles">
         <section class="bannerHero">
-          <h1 id="animatieTekst">
-            Hi, ik ben Thijs Koppert<br />Welkom op mijn website!
-          </h1>
+          <div class="emojisBanner">💻 🎨 🧠 ⚡</div>
+          <h2 id="animatieTekst">
+            Jouw merk, jouw verhaal. <br />
+            Ik vertaal het naar een sterk design.
+          </h2>
           <a class="bannerButton" href="#contentBoxing"
             ><svg
-              width="89"
-              height="89"
+              width="40"
+              height="40"
               viewBox="0 0 89 89"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -74,12 +76,12 @@
                 cx="44.5"
                 cy="44.5"
                 r="43.5"
-                stroke="white"
+                stroke="#FFFFFF"
                 stroke-width="3"
               />
               <path
                 d="M53.5 36V56.5M53.5 56.5H33.5M53.5 56.5L33.5 36"
-                stroke="white"
+                stroke="#FFFFFF"
                 stroke-width="3"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -89,103 +91,33 @@
           </a>
         </section>
         <section class="fotoVanMij">
-          <img src="./images/fotovanmijcut1.png" alt="" />
+          <img src="./images/overmijfoto-03.png" alt="" />
         </section>
       </div>
-
-      <section id="contentBoxing" class="contentBox">
-        <h2 class="titelProjecten">Recente projecten</h2>
-
-        <a class="contentWrapper" href="./projecten/UX/sportpoeder.html">
-          <div class="afbeelding">
-            <img
-              class="afbeeldingWafs"
-              src="images/Sportpoeder_iPhone_Mockup.png"
-              alt="iPhone scherm sportpoeder"
-            />
-          </div>
-          <div class="textBlok">
-            <h3>UX app-design</h3>
-            <p>
-              Voor de vernieuwde Sportpoeder-app, waarmee gebruikers hun
-              trainingen kunnen loggen, werk ik aan het UX- en app design. Ik
-              denk mee over de gebruikerservaring en vertaal dit naar een helder
-              en functioneel ontwerp.
-            </p>
-            <span>Bekijk project</span>
-          </div>
-        </a>
-
-        <a class="contentWrapper" href="projecten.html#hackathon">
-          <div class="afbeelding">
-            <img
-              class="afbeeldingWafs"
-              src="./images/hackathon_laptop.png"
-              alt="Hackathon project afbeelding"
-            />
-          </div>
-          <div class="textBlok">
-            <h3>Website design & development</h3>
-            <p>
-              Tijdens een hackathon binnen de minor web development kregen we de
-              opdracht om in één week tijd een website neer te zetten. De
-              opdracht was om een loftuiting te maken voor vrouwen in tech.
-            </p>
-            <span>Bekijk project</span>
-          </div>
-        </a>
-
-        <a class="contentWrapper" href="projecten.html#bt">
-          <div class="afbeelding">
-            <img
-              class="afbeeldingWafs"
-              src="images/Krukkert_logo_mockup.png"
-              alt="CSS project afbeelding"
-            />
-          </div>
-          <div class="textBlok">
-            <h3>Logo Ontwerp</h3>
-            <p>
-              Voor een lokale loodgieter ontwierp ik een sterk en herkenbaar
-              logo dat vakmanschap en betrouwbaarheid uitstraalt. Het ontwerp
-              sluit aan bij de branche en is inzetbaar op zowel drukwerk als
-              digitale kanalen.
-            </p>
-            <span>Bekijk project</span>
-          </div>
-        </a>
-
-        <a class="bekijkAlles" href="./projecten.html">
-          <p class="bekijkAllesP">Bekijk alles</p>
-          <svg
-            width="89"
-            height="89"
-            viewBox="0 0 89 89"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle
-              cx="44.5"
-              cy="44.5"
-              r="43.5"
-              stroke="currentColor"
-              stroke-width="3"
-            />
-            <path
-              d="M53.5 36V56.5M53.5 56.5H33.5M53.5 56.5L33.5 36"
-              stroke="currentColor"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </a>
-      </section>
     </div>
 
-    <footer class="mainFooter">
-      <p>&copy; 2025 Thijs Koppert</p>
-    </footer>
+    <section id="contentBoxing" class="projecten-grid">
+      <a href="./projecten/webdev.html" class="project-card card-1">
+        <small>💻</small>
+        <h2>Web Design & Development</h2>
+        <!-- <img src="./images/laptopscherm-02-02.png" alt="" class="scherm" /> -->
+      </a>
+      <a href="./projecten/logo.html" class="project-card card-2"
+        ><small>🎨</small>
+        <h2>Logo ontwerp</h2>
+        <!-- <img src="./images/kleurenwaaier-02.png" alt="" class="kleurenwaaier" /> -->
+      </a>
+      <a href="./projecten/overig.html" class="project-card card-3"
+        ><small>⚡</small>
+        <h2>Overige</h2>
+        <!-- <img src="./images/kwasten enzo-02.png" alt="" class="penceel" /> -->
+      </a>
+      <a href="./projecten/ux.html" class="project-card card-4"
+        ><small>🧠</small>
+        <h2>UX / UI Design</h2>
+        <!-- <img src="./images/ux-02.png" alt="" class="lineaal" /> -->
+      </a>
+    </section>
 
     <script src="script.js"></script>
   </body>
