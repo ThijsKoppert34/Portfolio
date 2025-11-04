@@ -1,24 +1,33 @@
 :root {
   --primaire-kleur: #211f42;
-  --achtergrond-body: #f2f2f2;
+  --achtergrond-body: linear-gradient(
+    135deg,
+    #fffdfa 0%,
+    #f8f6ff 40%,
+    #eae8f9 100%
+  );
   --logokleur-rood: #ed4b62;
   --logokleur-blauw: #57c0c8;
   --logokleur-paars: #855991;
   --zwart-text: #2d2d2d;
 
   --font-size-base: clamp(1rem, 0.5vw + 0.875rem, 1.125rem);
+  --font-size-h1: clamp(2.375rem, 2.1447rem + 0.9211vw, 3.25rem);
+  --font-size-button-noborder: clamp(1.25rem, 1.0197rem + 0.9211vw, 2.125rem);
 }
 
 @font-face {
   font-family: "Manrope";
   src: url(./fonts/Manrope-VariableFont_wght.ttf) format("truetype");
   font-weight: 50 900;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "SpaceMono";
   src: url(./fonts/SpaceMono-Regular.ttf) format("truetype");
   font-weight: 50 900;
+  font-display: swap;
 }
 
 @font-face {
@@ -26,6 +35,7 @@
   src: url(./fonts/Fraunces-VariableFont_SOFT\WONK\opsz\wght.ttf)
     format("truetype");
   font-weight: 50 900;
+  font-display: swap;
 }
 
 @font-face {
@@ -34,12 +44,14 @@
     format("truetype");
   font-weight: 50 900;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Quicksand";
   src: url(./fonts/Quicksand-VariableFont_wght.ttf) format("truetype");
   font-weight: 50 900;
+  font-display: swap;
 }
 
 * {
@@ -56,25 +68,25 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: var(--logokleur-blauw);
 }
 
 body {
   display: flex;
   flex-direction: column;
   font-family: "Manrope", sans-serif;
-  background-color: var(--achtergrond-body);
+  background: linear-gradient(
+    135deg,
+    #211f42 0%,
+    #3b2f73 35%,
+    #4f3f8e 60%,
+    #57c0c8 100%
+  );
   overflow-x: hidden;
 }
 
 /* styling van de nav */
 
 .navHome {
-  background: linear-gradient(
-    to bottom,
-    rgba(33, 31, 66, 1) 0%,
-    rgba(33, 31, 66, 0) 100%
-  );
   padding: 2.6rem 8rem 0rem 8rem;
   position: sticky;
 }
@@ -130,11 +142,9 @@ nav a:hover {
 .heroBackground {
   position: relative;
   width: 100%;
-  min-height: 500px;
-  background-image: url("./images/banner_achtergrond-01.jpg");
-  background-position: center top;
-  background-repeat: no-repeat;
+  border-bottom: 0.5px dashed #f2f2f2;
 }
+
 header,
 .bannerHero {
   background: transparent;
@@ -186,21 +196,33 @@ nav img {
 /* styling van de body */
 
 .bannerHero {
-  width: 100%;
+  width: 70%;
   box-sizing: border-box;
-  height: max-content;
-  overflow: hidden;
-
   display: flex;
+  gap: 2rem;
   flex-direction: column;
   align-items: flex-start;
-  padding: 2rem 0rem 3rem 0rem;
 }
 
-.bannerHero h1 {
-  font-weight: 150;
-  font-size: clamp(1.125rem, 0.2039rem + 3.6842vw, 4.625rem);
+.bannerHero h2 {
+  font-weight: 700;
+  font-size: clamp(1.5rem, 1.3026rem + 0.7895vw, 2.25rem);
+  font-family: Quicksand, serif;
   color: #ffffff;
+}
+
+.emojisBanner {
+  margin-bottom: auto;
+  padding: 0.3rem 1rem;
+  font-size: 1.6rem;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.25); /* donkerder, geeft diepte */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  /* Inwaartse schaduwen om de diepte te faken */
+  box-shadow: inset 0 8px 20px rgba(0, 0, 0, 0.45),
+    /* diepe binnenkant */ inset 0 -2px 6px rgba(255, 255, 255, 0.1);
 }
 
 .bannerAchtergrond img {
@@ -215,16 +237,16 @@ nav img {
 .bannerButton {
   display: flex;
   text-decoration: none;
+  justify-content: flex-start;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.6rem;
   position: relative;
   z-index: 10;
-  margin-top: 2rem;
 }
 
 .textBannerButton {
   position: relative;
-  font-size: clamp(1rem, 0.6053rem + 1.5789vw, 2.5rem);
+  font-size: var(--font-size-button-noborder);
   color: #ffffff;
   font-weight: 50;
   cursor: pointer;
@@ -235,9 +257,10 @@ nav img {
   position: absolute;
   bottom: -5px;
   left: 0;
+  z-index: 99999;
   width: 0%;
-  height: 2px;
-  background-color: white;
+  height: 1px;
+  background-color: #ffffff;
   transition: width 0.6s ease;
 }
 
@@ -246,8 +269,10 @@ nav img {
 }
 
 .bannerButton svg {
-  height: 3.2rem;
+  height: 2.4rem;
   transition: transform 0.7s ease;
+  flex-shrink: 0;
+  margin-left: 0;
 }
 
 .bannerButton:hover svg {
@@ -266,53 +291,34 @@ nav img {
   transform: translateY(0);
 }
 
-.contentWrapper {
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-
-  gap: 2rem;
-  width: 70vw;
-}
-
-.contentBox {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  background-color: var(--achtergrond-body);
-  padding: 2.5rem 8rem;
-  width: 100%;
-}
-
-.afbeeldingWafs {
-  width: 20vw;
-}
-
-a.contentWrapper {
-  color: inherit;
-  text-decoration: none;
-}
-
-a.contentWrapper:visited {
-  color: inherit;
-}
-
-a.contentWrapper:hover .afbeeldingWafs {
-  transform: scale(1.1) rotate(5deg);
-  transition: transform 0.4s cubic-bezier(0.4, 0.2, 0.2, 1);
-}
-a.contentWrapper .afbeeldingWafs {
-  transition: transform 0.4s cubic-bezier(0.4, 0.2, 0.2, 1);
-}
-
 .mainFooter {
   height: 10vh;
-  background-color: var(--primaire-kleur);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.1rem;
+
+  & div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100vw - 16rem);
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.35) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    );
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px); /* voor Safari */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
+
+    & p {
+      padding: 0.5rem 0;
+      width: max-content;
+    }
+  }
 }
 
 .bekijkAlles {
@@ -362,30 +368,34 @@ a.contentWrapper .afbeeldingWafs {
   transform: rotate(312deg);
 }
 
-.titelProjecten {
-  font-size: clamp(1.5rem, 1.3026rem + 0.7895vw, 2.25rem);
-  color: var(--primaire-kleur);
-  font-weight: 700;
-  font-family: "Quicksand", serif;
-}
-
 .heroAlles {
   display: flex;
-  width: 100%;
-  cursor: url("https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg"),
-    auto;
-  padding: 3rem 6rem 0rem 8rem;
+  min-height: 40vh;
+  width: calc(100% - 16rem);
+  margin: 3rem 8rem 3rem 8rem;
+  padding: 2rem;
   align-items: stretch;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px); /* voor Safari */
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 16px;
 }
 
 .fotoVanMij {
   display: flex;
   align-items: flex-end;
-  flex: 1;
+  margin-left: auto;
 }
 
 .fotoVanMij img {
-  width: 25vw;
+  width: 20vw;
+  aspect-ratio: 1/1;
+  object-fit: cover;
 }
 
 .textBlok {
@@ -929,6 +939,140 @@ a.contentWrapper .afbeeldingWafs {
   display: none;
 }
 
+.recent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 8rem;
+  width: 100%;
+
+  & .recent-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1rem;
+    height: 40rem;
+    width: 100%;
+
+    & .recent-1 {
+      grid-column: span 5;
+    }
+    & .recent-2 {
+      grid-column: span 3;
+    }
+    & .recent-3 {
+      grid-column: span 3;
+    }
+    & .recent-4 {
+      grid-column: span 5;
+    }
+    & .recent-5 {
+      grid-column: span 4;
+    }
+    & .recent-6 {
+      grid-column: span 4;
+    }
+
+    & .recent-1,
+    .recent-2,
+    .recent-3,
+    .recent-4,
+    .recent-5,
+    .recent-6 {
+      padding: 1rem;
+      display: block;
+      position: relative;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      overflow: hidden;
+      background-image: linear-gradient(white, white),
+        linear-gradient(
+          45deg,
+          #211f42 0%,
+          #57c0c8 37%,
+          #855991 67%,
+          #ed4b62 100%
+        );
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+      cursor: pointer;
+      text-decoration: none;
+
+      min-height: 14rem;
+
+      & .tile-content {
+        z-index: 4;
+      }
+
+      & .tile-content h3 {
+        font-size: clamp(1.125rem, 0.9276rem + 0.7895vw, 1.875rem);
+        z-index: 4;
+        color: #211f42;
+      }
+
+      & .tile-content small {
+        font-size: clamp(0.625rem, 0.5263rem + 0.3947vw, 1rem);
+        z-index: 4;
+        color: #2d2d2d;
+      }
+
+      & .image-wrapper {
+        position: absolute;
+        width: 25rem;
+        bottom: 0%;
+        right: 0%;
+        height: 12rem;
+        overflow: hidden;
+
+        & img {
+          height: 24rem;
+        }
+      }
+
+      & .image-wrapper1 {
+        position: absolute;
+        width: 25rem;
+        bottom: 0%;
+        right: -5%;
+        height: 12rem;
+        overflow: hidden;
+
+        & img {
+          height: 18rem;
+        }
+      }
+
+      & .image-wrapper2 {
+        position: absolute;
+        width: 25rem;
+        bottom: -10%;
+        right: -35%;
+        height: 12rem;
+        overflow: hidden;
+
+        & img {
+          height: 14rem;
+        }
+      }
+
+      & .image-wrapper3 {
+        position: absolute;
+        width: 25rem;
+        bottom: 0%;
+        right: 0%;
+        height: 16rem;
+        width: 50rem;
+        overflow: hidden;
+
+        & img {
+          position: absolute;
+          height: 20rem;
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
 /* ///////////////////////
 -----MEDIA QUERIES-----
 /////////////////////// */
@@ -940,6 +1084,38 @@ a.contentWrapper .afbeeldingWafs {
 
   .navHome {
     padding: 1rem 1rem;
+  }
+
+  .recent {
+    padding: 1rem 1rem;
+
+    & .recent-grid {
+      grid-template-columns: repeat(4, 1fr);
+      height: auto;
+
+      & .recent-1 {
+        grid-column: span 4;
+      }
+      & .recent-2 {
+        grid-column: span 4;
+      }
+      & .recent-3 {
+        grid-column: span 4;
+      }
+      & .recent-4 {
+        grid-column: span 4;
+      }
+      & .recent-5 {
+        grid-column: span 4;
+      }
+      & .recent-6 {
+        grid-column: span 4;
+      }
+
+      & .tile-content {
+        display: block;
+      }
+    }
   }
 
   .contentWrapper {
