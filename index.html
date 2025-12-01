@@ -59,11 +59,14 @@
 
       <div class="heroAlles">
         <section class="bannerHero">
-          <div class="emojisBanner">💻 🎨 🧠 ⚡</div>
-          <h2 id="animatieTekst">
-            Jouw merk, jouw verhaal. <br />
-            Ik vertaal het naar een sterk design.
-          </h2>
+          <div class="textBanner">
+            <h2 id="animatieTekst">
+              <span class="gekleurdeTekstBanner">Jouw merk,</span><br />jouw
+              verhaal.
+            </h2>
+            <h3>Ik vertaal het naar een sterk design.</h3>
+          </div>
+
           <a class="bannerButton" href="#contentBoxing"
             ><svg
               width="40"
@@ -72,13 +75,6 @@
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <circle
-                cx="44.5"
-                cy="44.5"
-                r="43.5"
-                stroke="#FFFFFF"
-                stroke-width="3"
-              />
               <path
                 d="M53.5 36V56.5M53.5 56.5H33.5M53.5 56.5L33.5 36"
                 stroke="#FFFFFF"
@@ -96,27 +92,214 @@
       </div>
     </div>
 
+    <section class="projectenSection">
+      <small class="projectenTitel">PROJECTEN</small>
+      <h2 class="projectenTitel2">Waar ik je mee help</h2>
+    </section>
+
     <section id="contentBoxing" class="projecten-grid">
       <a href="./projecten/webdev.html" class="project-card card-1">
-        <small>💻</small>
+        <small class="badge"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-monitor-icon lucide-monitor"
+          >
+            <rect width="20" height="14" x="2" y="3" rx="2" />
+            <line x1="8" x2="16" y1="21" y2="21" />
+            <line x1="12" x2="12" y1="17" y2="21" />
+
+            <!-- prettier-ignore -->
+          </svg></small
+        >
         <h2>Web Design & Development</h2>
-        <!-- <img src="./images/laptopscherm-02-02.png" alt="" class="scherm" /> -->
       </a>
       <a href="./projecten/logo.html" class="project-card card-2"
-        ><small>🎨</small>
+        ><small class="badge"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-palette-icon lucide-palette"
+          >
+            <path
+              d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z"
+            />
+            <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
+            <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
+            <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
+            <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
+
+            <!-- prettier-ignore -->
+          </svg></small
+        >
         <h2>Logo ontwerp</h2>
-        <!-- <img src="./images/kleurenwaaier-02.png" alt="" class="kleurenwaaier" /> -->
       </a>
       <a href="./projecten/overig.html" class="project-card card-3"
-        ><small>⚡</small>
+        ><small class="badge"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-sparkles-icon lucide-sparkles"
+          >
+            <path
+              d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"
+            />
+            <path d="M20 2v4" />
+            <path d="M22 4h-4" />
+            <circle cx="4" cy="20" r="2" />
+          </svg>
+        </small>
         <h2>Overige</h2>
-        <!-- <img src="./images/kwasten enzo-02.png" alt="" class="penceel" /> -->
       </a>
       <a href="./projecten/ux.html" class="project-card card-4"
-        ><small>🧠</small>
+        ><small class="badge"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-brain-icon lucide-brain"
+          >
+            <path d="M12 18V5" />
+            <path d="M15 13a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4" />
+            <path d="M17.598 6.5A3 3 0 1 0 12 5a3 3 0 1 0-5.598 1.5" />
+            <path d="M17.997 5.125a4 4 0 0 1 2.526 5.77" />
+            <path d="M18 18a4 4 0 0 0 2-7.464" />
+            <path d="M19.967 17.483A4 4 0 1 1 12 18a4 4 0 1 1-7.967-.517" />
+            <path d="M6 18a4 4 0 0 1-2-7.464" />
+            <path d="M6.003 5.125a4 4 0 0 0-2.526 5.77" />
+
+            <!-- prettier-ignore -->
+          </svg></small
+        >
         <h2>UX / UI Design</h2>
-        <!-- <img src="./images/ux-02.png" alt="" class="lineaal" /> -->
       </a>
+    </section>
+
+    <section class="projectenSection">
+      <small class="projectenTitel">TESTIMONIALS</small>
+      <h2 class="projectenTitel2">Wat anderen zeggen</h2>
+    </section>
+
+    <section class="onderLinks slider">
+      <button class="prev">‹</button>
+
+      <div class="slides">
+        <div class="slide">
+          <div class="kaartLinks1">
+            <img src="./images/fotoredwebsite-02.png" alt="" />
+            <section>
+              <p>
+                “Thijs is een gedreven en enthousiaste professional die ons
+                uitstekend heeft geholpen, en nog steeds helpt, bij het bouwen
+                en ontwerpen van de Sportpoeder app. Onze 70.000+ gebruikers
+                zijn bovendien zeer tevreden met de UX/UI-verbeteringen die
+                Thijs heeft doorgevoerd"
+              </p>
+              <section class="naamFunctie">
+                <h2>Red Hooftman</h2>
+                <h3>CCO Sportpoeder</h3>
+              </section>
+            </section>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="kaartLinks1">
+            <img src="./images/fotoredwebsite-02.png" alt="" />
+            <section>
+              <p>
+                “Thijs is een gedreven en enthousiaste professional die ons
+                uitstekend heeft geholpen, en nog steeds helpt, bij het bouwen
+                en ontwerpen van de Sportpoeder app. Onze 70.000+ gebruikers
+                zijn bovendien zeer tevreden met de UX/UI-verbeteringen die
+                Thijs heeft doorgevoerd"
+              </p>
+              <section class="naamFunctie">
+                <h2>Jerrel den Harder</h2>
+                <h3>Harder Coaching</h3>
+              </section>
+            </section>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="kaartLinks1">
+            <img src="./images/KrukkertRond-14-14.png" alt="" />
+            <section>
+              <p>
+                “Thijs heeft mijn logo, visitekaartjes en bedrijfskleding
+                ontworpen en alles van begin tot eind geregeld. Hij denkt actief
+                mee, schakelt snel en bespaart me veel tijd. Het resultaat ziet
+                er fantastisch uit. Ik ben ontzettend tevreden.”
+              </p>
+              <section class="naamFunctie">
+                <h2>Stan Krukkert</h2>
+                <h3>Krukkert Loodgieters</h3>
+              </section>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <button class="next">›</button>
+    </section>
+
+    <section class="uitgelichtProject">
+      <section class="uitgelichtContent">
+        <small>UITGELICHT PROJECT</small>
+        <h2>Sportpoeder | UX app design</h2>
+        <p>
+          Voor Sportpoeder werk ik al langere tijd aan het UX design van de app.
+          Een onderdeel hiervan was ook om de nieuwe logfunctie volledig te
+          herontwerpen. Hiervoor heb ik veel onderzoek uitgevoerd om dit tot een
+          groot succes te maken. Een onderdeel hiervan was ook om de nieuwe
+          logfunctie volledig te herontwerpen. 
+        </p>
+        <a href=""
+          >Bekijk project<svg
+            width="40"
+            height="40"
+            viewBox="0 0 89 89"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M53.5 36V56.5M53.5 56.5H33.5M53.5 56.5L33.5 36"
+              stroke="#FFFFFF"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            /></svg
+        ></a>
+      </section>
+      <img src="./images/websiteMockupSPApp.png" alt="" />
     </section>
 
     <script src="script.js"></script>
