@@ -14,3 +14,44 @@ cards.forEach((card) => {
     card.style.removeProperty("--y");
   });
 });
+
+const slides = document.querySelectorAll(".slide");
+const slidesContainer = document.querySelector(".slides");
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
+
+let index = 0;
+const total = slides.length;
+const interval = 25000; // 14 sec
+
+function updateSlider() {
+  slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+}
+
+function nextSlide() {
+  index = (index + 1) % total;
+  updateSlider();
+}
+
+function prevSlide() {
+  index = (index - 1 + total) % total;
+  updateSlider();
+}
+
+nextBtn.addEventListener("click", () => {
+  nextSlide();
+  resetTimer();
+});
+
+prevBtn.addEventListener("click", () => {
+  prevSlide();
+  resetTimer();
+});
+
+// autoplay
+let timer = setInterval(nextSlide, interval);
+
+function resetTimer() {
+  clearInterval(timer);
+  timer = setInterval(nextSlide, interval);
+}
