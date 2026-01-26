@@ -1,57 +1,57 @@
-const cards = document.querySelectorAll(".project-card");
+const toggleBtn = document.getElementById("dark-mode-toggle");
+const body = document.body;
 
-cards.forEach((card) => {
-  card.addEventListener("mousemove", (e) => {
-    const rect = card.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
-    card.style.setProperty("--x", `${x}%`);
-    card.style.setProperty("--y", `${y}%`);
-  });
+// toggleBtn.addEventListener("click", () => {
+//   body.classList.toggle("dark-mode");
 
-  card.addEventListener("mouseleave", () => {
-    card.style.removeProperty("--x");
-    card.style.removeProperty("--y");
-  });
+//   const icon = toggleBtn.querySelector(".moon-icon");
+//   if (body.classList.contains("dark-mode")) {
+//     icon.textContent = "☀️";
+//   } else {
+//     icon.textContent = "🌙";
+//   }
+// });
+
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+
+  hamburger.classList.toggle("toggle");
 });
 
-const slides = document.querySelectorAll(".slide");
-const slidesContainer = document.querySelector(".slides");
-const nextBtn = document.querySelector(".next");
-const prevBtn = document.querySelector(".prev");
+const projectOrder = [
+  "project1.html",
+  "project2.html",
+  "project3.html",
+  "project4.html",
+  "project5.html",
+];
 
-let index = 0;
-const total = slides.length;
-const interval = 25000; // 14 sec
+// Huidige pagina bepalen
+const currentPageName = window.location.pathname.split("/").pop();
+const currentIndex = projectOrder.indexOf(currentPageName);
 
-function updateSlider() {
-  slidesContainer.style.transform = `translateX(-${index * 100}%)`;
-}
+// Buttons
+const prevDiv = document.getElementById("prev-button");
+const nextDiv = document.getElementById("next-button");
 
-function nextSlide() {
-  index = (index + 1) % total;
-  updateSlider();
-}
+if (prevDiv && nextDiv && currentIndex !== -1) {
+  const prevLink = prevDiv.querySelector("a");
+  const nextLink = nextDiv.querySelector("a");
 
-function prevSlide() {
-  index = (index - 1 + total) % total;
-  updateSlider();
-}
+  // Vorige project
+  if (currentIndex > 0) {
+    prevLink.href = `./${projectOrder[currentIndex - 1]}`;
+  } else {
+    prevDiv.style.display = "none";
+  }
 
-nextBtn.addEventListener("click", () => {
-  nextSlide();
-  resetTimer();
-});
-
-prevBtn.addEventListener("click", () => {
-  prevSlide();
-  resetTimer();
-});
-
-// autoplay
-let timer = setInterval(nextSlide, interval);
-
-function resetTimer() {
-  clearInterval(timer);
-  timer = setInterval(nextSlide, interval);
+  // Volgende project
+  if (currentIndex < projectOrder.length - 1) {
+    nextLink.href = `./${projectOrder[currentIndex + 1]}`;
+  } else {
+    nextDiv.style.display = "none";
+  }
 }
