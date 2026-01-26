@@ -1,0 +1,82 @@
+:root {
+  /* Kleuren */
+  --primary-color: #242949;
+  --secondary-color: #ea4a62;
+  --third-color: #5cb9c5;
+  --background-color: #f2f2f2;
+  --background-color-cta: #ffffff;
+  --white: #ffffff;
+  --text-color: #150c27;
+  --text-color-dark: #150c27;
+  --text-color-secondary: #4a4a4a;
+  --text-color-light: #929292;
+  --cta-color: linear-gradient(90deg, #ea4a62 0%, #8b4fbf 50%, #5cb9c5 100%);
+
+  /* Typografie */
+  --font-main: "Quicksand", sans-serif;
+  --font-heading: "Montserrat", sans-serif;
+
+  --font-size-mini: clamp(0.75rem, 0.7rem + 0.25vw, 0.85rem);
+  --font-size-small: clamp(0.875rem, 0.8rem + 0.4vw, 1.1rem);
+  --font-size-normal: clamp(1rem, 0.92rem + 0.39vw, 1.25rem);
+  --font-size-normal-1: clamp(1.25rem, 1.08rem + 0.83vw, 1.78rem);
+  --font-size-h3: clamp(1.35rem, 1.1rem + 1.2vw, 2.2rem);
+  --font-size-h2: clamp(1.95rem, 1.45rem + 2.52vw, 3.58rem);
+  --font-size-h1: clamp(2.44rem, 1.63rem + 4.03vw, 5.06rem);
+  --font-size-mega: clamp(2.8rem, 5vw + 1.2rem, 6.2rem);
+
+  /* Spacing */
+  --between-titles: 1.4rem;
+  --between-sections: 3rem;
+
+  /* Borders  */
+  --border-radius: 16px;
+  --border-style-light: 0.2px solid #ced5de;
+
+  /* Other */
+  --drop-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Fonts */
+@font-face {
+  font-family: "Manrope";
+  src: url(./fonts/Manrope-VariableFont_wght.ttf) format("truetype");
+  font-weight: 50 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url(./fonts/Quicksand-VariableFont_wght.ttf) format("truetype");
+  font-weight: 50 1500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(./fonts/Poppins/Poppins-Black.ttf) format("truetype");
+  font-weight: 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(./fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
+  font-weight: 50 900;
+  font-display: swap;
+}
+
+/* Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-color);
+}

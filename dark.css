@@ -1,0 +1,90 @@
+/* 🌙🌙🌙 DARK MODE 🌙🌙🌙 */
+
+body.dark-mode {
+  --background-color: #0f172a;
+  --text-color-secondary: #cbd5e1;
+  --text-color: #f1f5f9;
+  --white: #150c27;
+  background-color: var(--background-color);
+}
+
+body.dark-mode header {
+  background-color: rgba(4, 4, 4, 0.8);
+}
+
+body.dark-mode header .logo-img {
+  content: url("./images/new-logo-light.png");
+}
+
+body.dark-mode .about-section1 {
+  background-color: #060311;
+}
+
+body.dark-mode .about-section2 {
+  background-color: #060311;
+
+  & .skills-card {
+    background-color: #060311;
+
+    & small {
+      color: #ffffff;
+    }
+  }
+}
+
+body.dark-mode .about-section3 {
+  background-color: #060311;
+}
+
+body.dark-mode .contact-section {
+  background-color: #060311;
+
+  & .contact-card h3,
+  p {
+    color: #ffffff;
+  }
+
+  & .contact-card a {
+    color: #060311;
+  }
+}
+
+body.dark-mode .hero {
+  background-color: #060311;
+
+  & .hero-cta-wrapper a:first-of-type {
+    color: #ffffff;
+  }
+
+  & .hero-cta-wrapper a:last-of-type {
+    color: #150c27;
+  }
+}
+
+body.dark-mode .selected-projects {
+  background-color: #060311;
+}
+
+body.dark-mode .testimonials {
+  background-color: #060311;
+
+  & .testimonials-card {
+    background-color: #060311;
+  }
+}
+
+body.dark-mode footer {
+  background-color: #060311;
+
+  & svg {
+    color: var(--text-color-secondary);
+  }
+
+  &::before {
+    background-color: var(--text-color-secondary);
+  }
+}
+
+body.dark-mode .work {
+  background-color: #060311;
+}
