@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="layout.css" />
     <link rel="stylesheet" href="dark.css" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Home</title>
+    <title>Thijs Koppert | UX/UI Designer</title>
   </head>
   <body>
     <header>
@@ -29,95 +29,97 @@
         </div>
 
         <ul class="nav-links" id="nav-links">
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <!-- <li>
-            <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">
-              <span class="moon-icon">🌙</span>
-            </button>
-          </li> -->
+          <li><a href="portfolio.html" data-i18n="nav_portfolio">Portfolio</a></li>
+          <li><a href="about.html" data-i18n="nav_about">About</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+          <li>
+            <div class="lang-toggle">
+              <button id="lang-nl" class="lang-active">NL</button>
+              <button id="lang-en">EN</button>
+            </div>
+          </li>
         </ul>
       </nav>
     </header>
+    <div class="menu-overlay" id="menu-overlay"></div>
     <section class="hero">
       <div class="hero-left">
-        <h1 class="hero-title">
+        <h1 class="hero-title hero-animate" data-i18n="hero_title">
           Let's <br />
           <span class="gradient-text">Create</span><br />Together
         </h1>
-        <p class="hero-subtitle">
+        <p class="hero-subtitle hero-animate-delay-1" data-i18n="hero_subtitle">
           Creative <span class="bold">UX / UI designer</span> with a focus on
           bold design and a background in development. I love a good challenge
           and use my technical edge to turn complex problems into seamless
           digital experiences.
         </p>
-        <div class="hero-cta-wrapper">
-          <a href="portfolio.html">View my work</a
-          ><a href="contact.html">Let's talk</a>
+        <div class="hero-cta-wrapper hero-animate-delay-2">
+          <a href="portfolio.html" data-i18n="hero_cta_work">View my work</a
+          ><a href="contact.html" data-i18n="hero_cta_talk">Let's talk</a>
         </div>
       </div>
-      <div class="hero-right">
+      <div class="hero-right hero-animate-img">
         <img src="./images/foto-hero-rond-shadow.jpg" alt="Foto van Thijs" />
       </div>
     </section>
 
-    <section class="selected-projects">
+    <section class="selected-projects reveal">
       <div class="selected-upper">
         <div class="selected-upper-text">
-          <small>PORTFOLIO</small>
-          <h3>Selected projects</h3>
+          <small data-i18n="selected_label">PORTFOLIO</small>
+          <h3 data-i18n="selected_title">Selected projects</h3>
         </div>
-        <a class="view-all" href="portfolio.html"
+        <a class="view-all" href="portfolio.html" data-i18n="selected_view_all"
           >View all projects<span class="arrow">↗</span></a
         >
       </div>
-      <div class="selected-lower">
+      <div class="selected-lower stagger-children">
         <a class="project-card" href="./projecten/project1.html">
           <img
-            src="./images/mockup-sportpoeder.png"
+            src="./images/sportpoeder-workout-tracker/mockup.png"
             alt=""
             class="project-image"
           />
 
           <div class="project-content">
-            <small class="project-tag">PRODUCT DESIGN</small>
-            <h3 class="project-title">Workout Tracker - Sportpoeder</h3>
+            <small class="project-tag" data-i18n="tag_product_design">PRODUCT DESIGN</small>
+            <h3 class="project-title" data-i18n="project_sportpoeder">Workout Tracker - Sportpoeder</h3>
           </div>
         </a>
-        <a class="project-card" href="">
+        <a class="project-card" href="./projecten/project2.html">
           <img
-            src="./images/redesign-visuals-p1.jpg"
+            src="./images/app-slechtzienden/laptop.png"
             alt=""
             class="project-image"
           />
 
           <div class="project-content">
-            <small class="project-tag">UX/UI DESIGN</small>
-            <h3 class="project-title">Redesign navbar - P1 travel</h3>
+            <small class="project-tag">ACCESSIBILITY · WEB APP</small>
+            <h3 class="project-title">App voor Slechtzienden</h3>
           </div>
         </a>
-        <a class="project-card" href="">
+        <a class="project-card" href="./projecten/project3.html">
           <img
-            src="./images/mockup-spotify-cover.jpg"
+            src="./images/harder-coaching/laptop.png"
             alt=""
             class="project-image"
           />
 
           <div class="project-content">
-            <small class="project-tag">DESIGN</small>
-            <h3 class="project-title">Spotify Cover</h3>
+            <small class="project-tag">BRANDING · WEB DESIGN</small>
+            <h3 class="project-title">Harder Coaching</h3>
           </div>
         </a>
       </div>
     </section>
 
-    <section class="testimonials">
+    <section class="testimonials reveal">
       <div class="testimonials-upper">
-        <small>KIND WORDS</small>
-        <h3>What others say</h3>
+        <small data-i18n="testimonials_label">KIND WORDS</small>
+        <h3 data-i18n="testimonials_title">What others say</h3>
       </div>
-      <div class="testimonials-lower">
+      <div class="testimonials-lower stagger-children">
         <div class="testimonials-card">
           <div class="testimonials-card-upper">
             <div class="testimonials-photo">
@@ -125,30 +127,18 @@
             </div>
             <div class="testimonials-name">
               <h4>Red Hooftman</h4>
-              <small>CCO Sportpoeder</small>
+              <small data-i18n="testimonial_role_red">CCO Sportpoeder</small>
             </div>
             <div class="testimonials-svg">
-              <svg
-                width="25"
-                height="14"
-                viewBox="0 0 28 20"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2.209 19.541C2.3926 19.8271 2.71 20 3.0498 20H10C11.6543 20 13 18.6543 13 17V10C13 8.3457 11.6543 7 10 7H8.0146C8.9433 4.3105 9.7363 3.0225 12.375 1.9229C12.8154 1.7393 13.0645 1.2706 12.9707 0.802799C12.877 0.335899 12.4668 0 11.9902 0H11.9882C6.4833 0.0098 3.3212 2.2168 1.079 7.6113C0.363301 9.3057 0 11.1191 0 13C0 15.8926 0.875 17.4678 2.209 19.541Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M18.0498 20H25C26.6543 20 28 18.6543 28 17V10C28 8.3457 26.6543 7 25 7H23.0146C23.9433 4.3105 24.7363 3.0225 27.375 1.9229C27.8154 1.7393 28.0645 1.2706 27.9707 0.802799C27.877 0.335899 27.4668 0 26.9902 0H26.9882C21.4833 0.0098 18.3212 2.2168 16.079 7.6113C15.3633 9.3057 15 11.1191 15 13C15 15.8926 15.875 17.4678 17.209 19.541C17.3926 19.8271 17.71 20 18.0498 20Z"
-                  fill="currentColor"
-                />
+              <svg width="25" height="14" viewBox="0 0 28 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.209 19.541C2.3926 19.8271 2.71 20 3.0498 20H10C11.6543 20 13 18.6543 13 17V10C13 8.3457 11.6543 7 10 7H8.0146C8.9433 4.3105 9.7363 3.0225 12.375 1.9229C12.8154 1.7393 13.0645 1.2706 12.9707 0.802799C12.877 0.335899 12.4668 0 11.9902 0H11.9882C6.4833 0.0098 3.3212 2.2168 1.079 7.6113C0.363301 9.3057 0 11.1191 0 13C0 15.8926 0.875 17.4678 2.209 19.541Z" fill="currentColor" />
+                <path d="M18.0498 20H25C26.6543 20 28 18.6543 28 17V10C28 8.3457 26.6543 7 25 7H23.0146C23.9433 4.3105 24.7363 3.0225 27.375 1.9229C27.8154 1.7393 28.0645 1.2706 27.9707 0.802799C27.877 0.335899 27.4668 0 26.9902 0H26.9882C21.4833 0.0098 18.3212 2.2168 16.079 7.6113C15.3633 9.3057 15 11.1191 15 13C15 15.8926 15.875 17.4678 17.209 19.541C17.3926 19.8271 17.71 20 18.0498 20Z" fill="currentColor" />
               </svg>
             </div>
           </div>
           <div class="testimonials-card-lower">
-            <p>
-              “Thijs is een gedreven en enthousiaste professional die ons
+            <p data-i18n="testimonial_text_red">
+              "Thijs is een gedreven en enthousiaste professional die ons
               uitstekend heeft geholpen, en nog steeds helpt, bij het bouwen en
               ontwerpen van de Sportpoeder app. Onze 70.000+ gebruikers zijn
               bovendien zeer tevreden met de UX/UI-verbeteringen die Thijs heeft
@@ -160,37 +150,25 @@
         <div class="testimonials-card">
           <div class="testimonials-card-upper">
             <div class="testimonials-photo">
-              <img src="./images/fotokrukkert.jpg" alt="Red Hooftman" />
+              <img src="./images/fotokrukkert.jpg" alt="Stan Krukkert" />
             </div>
             <div class="testimonials-name">
               <h4>Stan Krukkert</h4>
-              <small>Owner Krukkert Loodgieters</small>
+              <small data-i18n="testimonial_role_stan">Owner Krukkert Loodgieters</small>
             </div>
             <div class="testimonials-svg">
-              <svg
-                width="25"
-                height="14"
-                viewBox="0 0 28 20"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2.209 19.541C2.3926 19.8271 2.71 20 3.0498 20H10C11.6543 20 13 18.6543 13 17V10C13 8.3457 11.6543 7 10 7H8.0146C8.9433 4.3105 9.7363 3.0225 12.375 1.9229C12.8154 1.7393 13.0645 1.2706 12.9707 0.802799C12.877 0.335899 12.4668 0 11.9902 0H11.9882C6.4833 0.0098 3.3212 2.2168 1.079 7.6113C0.363301 9.3057 0 11.1191 0 13C0 15.8926 0.875 17.4678 2.209 19.541Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M18.0498 20H25C26.6543 20 28 18.6543 28 17V10C28 8.3457 26.6543 7 25 7H23.0146C23.9433 4.3105 24.7363 3.0225 27.375 1.9229C27.8154 1.7393 28.0645 1.2706 27.9707 0.802799C27.877 0.335899 27.4668 0 26.9902 0H26.9882C21.4833 0.0098 18.3212 2.2168 16.079 7.6113C15.3633 9.3057 15 11.1191 15 13C15 15.8926 15.875 17.4678 17.209 19.541C17.3926 19.8271 17.71 20 18.0498 20Z"
-                  fill="currentColor"
-                />
+              <svg width="25" height="14" viewBox="0 0 28 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.209 19.541C2.3926 19.8271 2.71 20 3.0498 20H10C11.6543 20 13 18.6543 13 17V10C13 8.3457 11.6543 7 10 7H8.0146C8.9433 4.3105 9.7363 3.0225 12.375 1.9229C12.8154 1.7393 13.0645 1.2706 12.9707 0.802799C12.877 0.335899 12.4668 0 11.9902 0H11.9882C6.4833 0.0098 3.3212 2.2168 1.079 7.6113C0.363301 9.3057 0 11.1191 0 13C0 15.8926 0.875 17.4678 2.209 19.541Z" fill="currentColor" />
+                <path d="M18.0498 20H25C26.6543 20 28 18.6543 28 17V10C28 8.3457 26.6543 7 25 7H23.0146C23.9433 4.3105 24.7363 3.0225 27.375 1.9229C27.8154 1.7393 28.0645 1.2706 27.9707 0.802799C27.877 0.335899 27.4668 0 26.9902 0H26.9882C21.4833 0.0098 18.3212 2.2168 16.079 7.6113C15.3633 9.3057 15 11.1191 15 13C15 15.8926 15.875 17.4678 17.209 19.541C17.3926 19.8271 17.71 20 18.0498 20Z" fill="currentColor" />
               </svg>
             </div>
           </div>
           <div class="testimonials-card-lower">
-            <p>
-              “Thijs heeft mijn logo, visitekaartjes en bedrijfskleding
+            <p data-i18n="testimonial_text_stan">
+              "Thijs heeft mijn logo, visitekaartjes en bedrijfskleding
               ontworpen en alles van begin tot eind geregeld. Hij denkt actief
               mee, schakelt snel en bespaart me veel tijd. Het resultaat ziet er
-              fantastisch uit. Ik ben ontzettend tevreden.”
+              fantastisch uit. Ik ben ontzettend tevreden."
             </p>
           </div>
         </div>
@@ -198,34 +176,22 @@
         <div class="testimonials-card">
           <div class="testimonials-card-upper">
             <div class="testimonials-photo">
-              <img src="./images/fotojerrelwebsite.jpg" alt="Red Hooftman" />
+              <img src="./images/fotojerrelwebsite.jpg" alt="Jerrel den Harder" />
             </div>
             <div class="testimonials-name">
               <h4>Jerrel den Harder</h4>
-              <small>Owner Harder Coaching</small>
+              <small data-i18n="testimonial_role_jerrel">Owner Harder Coaching</small>
             </div>
             <div class="testimonials-svg">
-              <svg
-                width="25"
-                height="14"
-                viewBox="0 0 28 20"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2.209 19.541C2.3926 19.8271 2.71 20 3.0498 20H10C11.6543 20 13 18.6543 13 17V10C13 8.3457 11.6543 7 10 7H8.0146C8.9433 4.3105 9.7363 3.0225 12.375 1.9229C12.8154 1.7393 13.0645 1.2706 12.9707 0.802799C12.877 0.335899 12.4668 0 11.9902 0H11.9882C6.4833 0.0098 3.3212 2.2168 1.079 7.6113C0.363301 9.3057 0 11.1191 0 13C0 15.8926 0.875 17.4678 2.209 19.541Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M18.0498 20H25C26.6543 20 28 18.6543 28 17V10C28 8.3457 26.6543 7 25 7H23.0146C23.9433 4.3105 24.7363 3.0225 27.375 1.9229C27.8154 1.7393 28.0645 1.2706 27.9707 0.802799C27.877 0.335899 27.4668 0 26.9902 0H26.9882C21.4833 0.0098 18.3212 2.2168 16.079 7.6113C15.3633 9.3057 15 11.1191 15 13C15 15.8926 15.875 17.4678 17.209 19.541C17.3926 19.8271 17.71 20 18.0498 20Z"
-                  fill="currentColor"
-                />
+              <svg width="25" height="14" viewBox="0 0 28 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.209 19.541C2.3926 19.8271 2.71 20 3.0498 20H10C11.6543 20 13 18.6543 13 17V10C13 8.3457 11.6543 7 10 7H8.0146C8.9433 4.3105 9.7363 3.0225 12.375 1.9229C12.8154 1.7393 13.0645 1.2706 12.9707 0.802799C12.877 0.335899 12.4668 0 11.9902 0H11.9882C6.4833 0.0098 3.3212 2.2168 1.079 7.6113C0.363301 9.3057 0 11.1191 0 13C0 15.8926 0.875 17.4678 2.209 19.541Z" fill="currentColor" />
+                <path d="M18.0498 20H25C26.6543 20 28 18.6543 28 17V10C28 8.3457 26.6543 7 25 7H23.0146C23.9433 4.3105 24.7363 3.0225 27.375 1.9229C27.8154 1.7393 28.0645 1.2706 27.9707 0.802799C27.877 0.335899 27.4668 0 26.9902 0H26.9882C21.4833 0.0098 18.3212 2.2168 16.079 7.6113C15.3633 9.3057 15 11.1191 15 13C15 15.8926 15.875 17.4678 17.209 19.541C17.3926 19.8271 17.71 20 18.0498 20Z" fill="currentColor" />
               </svg>
             </div>
           </div>
           <div class="testimonials-card-lower">
-            <p>
-              “Bedankt voor alle hulp met de ontwikkeling van de website. Ik
+            <p data-i18n="testimonial_text_jerrel">
+              "Bedankt voor alle hulp met de ontwikkeling van de website. Ik
               vond de samenwerking echt top. Kon snel met je schakelen en het
               contact verliep goed. Thanks daarvoor!"
             </p>
@@ -234,38 +200,27 @@
       </div>
     </section>
 
-    <section class="contact-section">
+    <section class="contact-section reveal">
       <div class="contact-card">
-        <h3>Ready to work together?</h3>
-        <p>Tell me about your project</p>
-        <a href="contact.html">Let's talk</a>
+        <h3 data-i18n="cta_title">Ready to work together?</h3>
+        <p data-i18n="cta_subtitle">Tell me about your project</p>
+        <a href="contact.html" data-i18n="cta_button">Let's talk</a>
       </div>
     </section>
     <footer>
-      <div class="footer-copyright">
-        © 2026 Koppert Media & Design. All rights reserved.
+      <div class="footer-copyright" data-i18n="footer_copyright">
+        &copy; 2026 Koppert Media & Design. All rights reserved.
       </div>
-      <div class="linkedin-footer">
-        <a
-          href="http://www.linkedin.com/in/thijs-koppert-532212280"
-          target="_blank"
-        >
-          <svg
-            width="31"
-            height="31"
-            viewBox="0 0 31 31"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M26.999 0C29.2082 0 30.999 1.79086 30.999 4V26.999C30.999 29.2082 29.2082 30.999 26.999 30.999H4C1.79086 30.999 0 29.2082 0 26.999V4C0 1.79086 1.79086 0 4 0H26.999ZM4.84277 12.1924V25.5596H10.1543V12.1592L4.84277 12.1924ZM21.1553 11.6426C17.8951 11.6426 17.0129 13.8111 17.001 13.8408L17.0352 12.1592H12.8564L12.7861 25.5439H17.1055V17.334C17.1055 17.334 17.4891 15.2734 19.585 15.2734C21.6649 15.2736 21.9179 17.4059 21.9219 17.4404V25.5439H26.2002V17.0547C25.9237 13.5282 24.4365 11.6427 21.1553 11.6426ZM7.48828 5.50684C6.00407 5.50684 4.79883 6.57177 4.79883 7.88379C4.79895 9.19571 6.00414 10.2568 7.48828 10.2568C8.97232 10.2568 10.1776 9.19572 10.1777 7.88379C10.1777 6.57177 8.97244 5.50689 7.48828 5.50684Z"
-              fill="#currentColor"
-            />
+      <div class="footer-right">
+        <a href="http://www.linkedin.com/in/thijs-koppert-532212280" target="_blank" aria-label="LinkedIn">
+          <svg width="24" height="24" viewBox="0 0 31 31" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M26.999 0C29.2082 0 30.999 1.79086 30.999 4V26.999C30.999 29.2082 29.2082 30.999 26.999 30.999H4C1.79086 30.999 0 29.2082 0 26.999V4C0 1.79086 1.79086 0 4 0H26.999ZM4.84277 12.1924V25.5596H10.1543V12.1592L4.84277 12.1924ZM21.1553 11.6426C17.8951 11.6426 17.0129 13.8111 17.001 13.8408L17.0352 12.1592H12.8564L12.7861 25.5439H17.1055V17.334C17.1055 17.334 17.4891 15.2734 19.585 15.2734C21.6649 15.2736 21.9179 17.4059 21.9219 17.4404V25.5439H26.2002V17.0547C25.9237 13.5282 24.4365 11.6427 21.1553 11.6426ZM7.48828 5.50684C6.00407 5.50684 4.79883 6.57177 4.79883 7.88379C4.79895 9.19571 6.00414 10.2568 7.48828 10.2568C8.97232 10.2568 10.1776 9.19572 10.1777 7.88379C10.1777 6.57177 8.97244 5.50689 7.48828 5.50684Z" fill="currentColor" />
           </svg>
         </a>
       </div>
     </footer>
 
+    <script src="translations.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

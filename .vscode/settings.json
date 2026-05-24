@@ -1,3 +1,16 @@
 {
-  "liveServer.settings.port": 5502
+  "liveServer.settings.port": 5502,
+  "liveServer.settings.ignoreFiles": [
+    ".vscode/**",
+    "**/*.scss",
+    "**/*.sass",
+    "**/*.ts",
+    "**/.DS_Store",
+    "**/.git/**",
+    "**/node_modules/**"
+  ],
+  "liveServer.settings.fullReload": false,
+  "liveServer.settings.wait": 1000,
+  "files.autoSave": "off",
+  "editor.formatOnSave": false
 }

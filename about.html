@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="layout.css" />
     <link rel="stylesheet" href="dark.css" />
     <link rel="stylesheet" href="./style.css" />
-    <title>About</title>
+    <title>About | Thijs Koppert</title>
   </head>
   <body>
     <header>
@@ -29,30 +29,27 @@
         </div>
 
         <ul class="nav-links" id="nav-links">
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <!-- <li>
-            <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">
-              <span class="moon-icon">🌙</span>
-            </button>
-          </li> -->
+          <li><a href="portfolio.html" data-i18n="nav_portfolio">Portfolio</a></li>
+          <li><a href="about.html" data-i18n="nav_about">About</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+          <li><div class="lang-toggle"><button id="lang-nl" class="lang-active">NL</button><button id="lang-en">EN</button></div></li>
         </ul>
       </nav>
     </header>
+    <div class="menu-overlay" id="menu-overlay"></div>
 
     <section class="about-section1">
       <div>
         <img src="./images/foto-overmij.jpg" alt="" />
       </div>
       <div>
-        <small>CURRENTLY AVAILABLE FOR NEW PROJECTS</small>
-        <h2>
+        <small data-i18n="about_label">CURRENTLY AVAILABLE FOR NEW PROJECTS</small>
+        <h2 data-i18n="about_title">
           Hi, I'm Thijs, <br /><span class="gradient-text"
             >Digital Creative</span
           >
         </h2>
-        <p>
+        <p data-i18n="about_bio">
           As a recently graduated designer, I discovered my passion for UX/UI
           during my final thesis project for Sportpoeder, where I researched and
           designed a complete fitness tracker function within their app.
@@ -65,11 +62,11 @@
         </p>
       </div>
     </section>
-    <section class="about-section2">
+    <section class="about-section2 reveal">
       <div class="small">
-        <small>MY TOOLKIT</small>
+        <small data-i18n="about_toolkit">MY TOOLKIT</small>
       </div>
-      <div class="skills-cards">
+      <div class="skills-cards stagger-children">
         <div class="skills-card">
           <svg
             width="37"
@@ -161,31 +158,31 @@
         </div>
       </div>
     </section>
-    <section class="about-section3">
+    <section class="about-section3 reveal">
       <div class="small">
-        <small>BEYOND THE WORK</small>
+        <small data-i18n="about_beyond">BEYOND THE WORK</small>
       </div>
-      <div class="beyond-cards">
+      <div class="beyond-cards stagger-children">
         <div class="beyond-card">
           <img src="./images/football.jpg" alt="" />
-          <h4>On the Pitch</h4>
-          <p>
+          <h4 data-i18n="beyond_pitch_title">On the Pitch</h4>
+          <p data-i18n="beyond_pitch_text">
             On the pitch three times a week to play the game I love at beautiful
             vv Kagia.
           </p>
         </div>
         <div class="beyond-card">
           <img src="./images/outdoors.jpeg" alt="" />
-          <h4>Outdoors</h4>
-          <p>
+          <h4 data-i18n="beyond_outdoors_title">Outdoors</h4>
+          <p data-i18n="beyond_outdoors_text">
             I'm a big fan of hiking and exploring the outdoors. I really enjoy
             the adventure of being in nature.
           </p>
         </div>
         <div class="beyond-card">
           <img src="./images/festival.JPG" alt="" />
-          <h4>Good Times</h4>
-          <p>
+          <h4 data-i18n="beyond_goodtimes_title">Good Times</h4>
+          <p data-i18n="beyond_goodtimes_text">
             There’s nothing I enjoy more than spending time with friends; it
             really gives me a boost!
           </p>
@@ -193,37 +190,39 @@
       </div>
     </section>
 
-    <section class="contact-section">
+    <section class="contact-section reveal">
       <div class="contact-card">
-        <h3>Ready to work together?</h3>
-        <p>Tell me about your project</p>
-        <a href="contact.html">Let's talk</a>
+        <h3 data-i18n="cta_title">Ready to work together?</h3>
+        <p data-i18n="cta_subtitle">Tell me about your project</p>
+        <a href="contact.html" data-i18n="cta_button">Let's talk</a>
       </div>
     </section>
     <footer>
-      <div class="footer-copyright">
+      <div class="footer-copyright" data-i18n="footer_copyright">
         © 2026 Koppert Media & Design. All rights reserved.
       </div>
-      <div class="linkedin-footer">
+      <div class="footer-right">
         <a
           href="http://www.linkedin.com/in/thijs-koppert-532212280"
           target="_blank"
+          aria-label="LinkedIn"
         >
           <svg
-            width="31"
-            height="31"
+            width="24"
+            height="24"
             viewBox="0 0 31 31"
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M26.999 0C29.2082 0 30.999 1.79086 30.999 4V26.999C30.999 29.2082 29.2082 30.999 26.999 30.999H4C1.79086 30.999 0 29.2082 0 26.999V4C0 1.79086 1.79086 0 4 0H26.999ZM4.84277 12.1924V25.5596H10.1543V12.1592L4.84277 12.1924ZM21.1553 11.6426C17.8951 11.6426 17.0129 13.8111 17.001 13.8408L17.0352 12.1592H12.8564L12.7861 25.5439H17.1055V17.334C17.1055 17.334 17.4891 15.2734 19.585 15.2734C21.6649 15.2736 21.9179 17.4059 21.9219 17.4404V25.5439H26.2002V17.0547C25.9237 13.5282 24.4365 11.6427 21.1553 11.6426ZM7.48828 5.50684C6.00407 5.50684 4.79883 6.57177 4.79883 7.88379C4.79895 9.19571 6.00414 10.2568 7.48828 10.2568C8.97232 10.2568 10.1776 9.19572 10.1777 7.88379C10.1777 6.57177 8.97244 5.50689 7.48828 5.50684Z"
-              fill="#currentColor"
+              fill="currentColor"
             />
           </svg>
         </a>
       </div>
     </footer>
+    <script src="translations.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

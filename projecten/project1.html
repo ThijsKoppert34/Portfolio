@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../layout.css" />
     <link rel="stylesheet" href="../dark.css" />
     <link rel="stylesheet" href="../style.css" />
-    <title>Project</title>
+    <title>Workout Tracker | Thijs Koppert</title>
   </head>
   <body>
     <header>
@@ -29,23 +29,78 @@
         </div>
 
         <ul class="nav-links" id="nav-links">
-          <li><a href="../portfolio.html">Portfolio</a></li>
-          <li><a href="../about.html">About</a></li>
-          <li><a href="../contact.html">Contact</a></li>
-          <!-- <li>
-            <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">
-              <span class="moon-icon">🌙</span>
-            </button>
-          </li> -->
+          <li><a href="../portfolio.html" data-i18n="nav_portfolio">Portfolio</a></li>
+          <li><a href="../about.html" data-i18n="nav_about">About</a></li>
+          <li><a href="../contact.html" data-i18n="nav_contact">Contact</a></li>
+          <li><div class="lang-toggle"><button id="lang-nl" class="lang-active">NL</button><button id="lang-en">EN</button></div></li>
         </ul>
       </nav>
     </header>
+    <div class="menu-overlay" id="menu-overlay"></div>
 
-    <section class="project-section1">
-      <div class="project-info">
-        <small>PRODUCT DESIGN</small>
-        <h4>Workout Tracker</h4>
-        <p>
+    <!-- HERO / INTRO -->
+    <section class="project-hero">
+      <div class="project-hero-content">
+        <div class="project-hero-text">
+          <small class="project-tag-label" data-i18n="tag_product_design">PRODUCT DESIGN</small>
+          <h1>Workout Tracker</h1>
+          <p data-i18n="project_desc_sportpoeder">
+            An intuitive minimalistic application designed to handle complex
+            training routines. Reducing noise during trainings to keep the focus
+            on the workouts. This project was my final thesis project and with
+            this project I developed my passion for UX/UI design. I had to work
+            with multiple stakeholders and did a lot of usability testing. The
+            product will be launched very soon as the developers are now building
+            this design.
+          </p>
+        </div>
+        <div class="project-hero-image">
+          <img src="../images/sportpoeder-workout-tracker/mockup.png" alt="Sportpoeder Workout Tracker Mockup" />
+        </div>
+      </div>
+
+      <div class="project-meta">
+        <div class="project-meta-item">
+          <span data-i18n="project_service">SERVICE</span>
+          <p>UX/UI Design</p>
+        </div>
+        <div class="project-meta-item">
+          <span data-i18n="project_client">CLIENT</span>
+          <p>Sportpoeder</p>
+        </div>
+        <div class="project-meta-item">
+          <span data-i18n="project_year">YEAR</span>
+          <p>2025</p>
+        </div>
+        <div class="project-meta-item">
+          <span>ROLE</span>
+          <p>Lead Designer</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS -->
+    <section class="project-highlights reveal">
+      <div class="highlight-card">
+        <h2>70K+</h2>
+        <p>Active users worldwide</p>
+      </div>
+      <div class="highlight-card">
+        <h2>6 mo.</h2>
+        <p>Final thesis project</p>
+      </div>
+      <div class="highlight-card">
+        <h2>2025</h2>
+        <p>Launching this year</p>
+      </div>
+    </section>
+
+    <!-- THE PROCESS -->
+    <section class="project-process reveal">
+      <div class="project-process-text">
+        <small>THE APPROACH</small>
+        <h2 data-i18n="project_process">The process</h2>
+        <p data-i18n="project_desc_sportpoeder">
           An intuitive minimalistic application designed to handle complex
           training routines. Reducing noise during trainings to keep the focus
           on the workouts. This project was my final thesis project and with
@@ -54,146 +109,94 @@
           product will be launched very soon as the developers are now building
           this design.
         </p>
-        <div class="project-info1">
-          <div>
-            <span>SERVICE</span>
-            <p>UX/UI Design</p>
+      </div>
+      <div class="project-deliverables-wrapper">
+        <small data-i18n="project_deliverables">DELIVERABLES</small>
+        <div class="project-deliverables-grid">
+          <div class="deliverable-card">
+            <svg width="28" height="28" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="15.5" cy="15.5" r="15.5" fill="#5CB9C5" />
+              <path d="M22 12L13.75 20L10 16.3636" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span data-i18n="project_deliverable_app">Mobile App Design</span>
           </div>
-          <div>
-            <span>CLIENT</span>
-            <p>Sportpoeder</p>
+          <div class="deliverable-card">
+            <svg width="28" height="28" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="15.5" cy="15.5" r="15.5" fill="#5CB9C5" />
+              <path d="M22 12L13.75 20L10 16.3636" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span data-i18n="project_deliverable_system">Design System</span>
           </div>
-          <div>
-            <span>YEAR</span>
-            <p>2025</p>
+          <div class="deliverable-card">
+            <svg width="28" height="28" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="15.5" cy="15.5" r="15.5" fill="#5CB9C5" />
+              <path d="M22 12L13.75 20L10 16.3636" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span data-i18n="project_deliverable_needs">User Needs</span>
           </div>
         </div>
       </div>
-      <div class="project-image">
-        <img src="../images/mockup-sportpoeder.png" alt="" />
-      </div>
     </section>
-    <section class="project-section2">
-      <div class="section2-info">
-        <h4>The process</h4>
-        <p>
-          An intuitive minimalistic application designed to handle complex
-          training routines. Reducing noise during trainings to keep the focus
-          on the workouts. This project was my final thesis project and with
-          this project I developed my passion for UX/UI design. I had to work
-          with multiple stakeholders and did a lot of usability testing. The
-          product will be launched very soon as the developers are now building
-          this design.
-        </p>
+
+    <!-- VISUAL SHOWCASE -->
+    <section class="project-showcase reveal">
+      <div class="project-showcase-header">
+        <small>VISUAL DESIGN</small>
+        <h2>The user flow</h2>
       </div>
-      <div class="section2-deliverables">
-        <span>DELIVERABLES</span>
-        <div class="deliverables">
-          <div class="deliverable">
-            <svg
-              width="26"
-              height="26"
-              viewBox="0 0 31 31"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="15.5" cy="15.5" r="15.5" fill="#5CB9C5" />
-              <path
-                d="M22 12L13.75 20L10 16.3636"
-                stroke="white"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <span class="deliverable-name">Mobile App Design</span>
-          </div>
-          <div class="deliverable">
-            <svg
-              width="26"
-              height="26"
-              viewBox="0 0 31 31"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="15.5" cy="15.5" r="15.5" fill="#5CB9C5" />
-              <path
-                d="M22 12L13.75 20L10 16.3636"
-                stroke="white"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <span class="deliverable-name">Design System</span>
-          </div>
-          <div class="deliverable">
-            <svg
-              width="26"
-              height="26"
-              viewBox="0 0 31 31"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="15.5" cy="15.5" r="15.5" fill="#5CB9C5" />
-              <path
-                d="M22 12L13.75 20L10 16.3636"
-                stroke="white"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <span class="deliverable-name">User Needs</span>
-          </div>
-        </div>
-        <a href="">Download App</a>
+      <div class="project-showcase-image">
+        <img src="../images/sportpoeder-workout-tracker/flow-workout.png" alt="User flow van de workout tracker" />
       </div>
+      <p class="project-showcase-caption" data-i18n="project_caption_flow">De flow van het uitgewerkte flow-prototype</p>
     </section>
-    <section class="project-section3">
-      <div class="project-section3-img">
-        <img src="../images/flow-prototype.png" alt="" />
-        <span>De flow van het uitgewerkte flow-prototype</span>
-      </div>
-      <div class="project-section3-img">
-        <img src="../images/gebruikerstest-max.png" alt="" />
-        <span>Een gebruikerstest</span>
-      </div>
-    </section>
+
+    <!-- PROJECT NAVIGATION -->
     <div class="project-skip">
       <div class="previous" id="prev-button">
-        <a href="">Previous Project</a>
+        <a href="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span data-i18n="project_prev">Previous Project</span>
+        </a>
       </div>
       <div class="next" id="next-button">
-        <a href="">Next Project</a>
+        <a href="">
+          <span data-i18n="project_next">Next Project</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
       </div>
     </div>
 
     <footer>
-      <div class="footer-copyright">
+      <div class="footer-copyright" data-i18n="footer_copyright">
         © 2026 Koppert Media & Design. All rights reserved.
       </div>
-      <div class="linkedin-footer">
+      <div class="footer-right">
         <a
           href="http://www.linkedin.com/in/thijs-koppert-532212280"
           target="_blank"
+          aria-label="LinkedIn"
         >
           <svg
-            width="31"
-            height="31"
+            width="24"
+            height="24"
             viewBox="0 0 31 31"
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M26.999 0C29.2082 0 30.999 1.79086 30.999 4V26.999C30.999 29.2082 29.2082 30.999 26.999 30.999H4C1.79086 30.999 0 29.2082 0 26.999V4C0 1.79086 1.79086 0 4 0H26.999ZM4.84277 12.1924V25.5596H10.1543V12.1592L4.84277 12.1924ZM21.1553 11.6426C17.8951 11.6426 17.0129 13.8111 17.001 13.8408L17.0352 12.1592H12.8564L12.7861 25.5439H17.1055V17.334C17.1055 17.334 17.4891 15.2734 19.585 15.2734C21.6649 15.2736 21.9179 17.4059 21.9219 17.4404V25.5439H26.2002V17.0547C25.9237 13.5282 24.4365 11.6427 21.1553 11.6426ZM7.48828 5.50684C6.00407 5.50684 4.79883 6.57177 4.79883 7.88379C4.79895 9.19571 6.00414 10.2568 7.48828 10.2568C8.97232 10.2568 10.1776 9.19572 10.1777 7.88379C10.1777 6.57177 8.97244 5.50689 7.48828 5.50684Z"
-              fill="#currentColor"
+              fill="currentColor"
             />
           </svg>
         </a>
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="../translations.js"></script>
+    <script src="../script.js"></script>
   </body>
 </html>

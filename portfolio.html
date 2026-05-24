@@ -1,14 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg" href="./images/favicon.svg" />
+    <link rel="icon" type="image/png" href="./images/favicon-new.png" />
     <link rel="stylesheet" href="./base.css" />
     <link rel="stylesheet" href="layout.css" />
     <link rel="stylesheet" href="dark.css" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Portfolio</title>
+    <title>Portfolio | Thijs Koppert</title>
   </head>
   <body>
     <header>
@@ -29,128 +29,127 @@
         </div>
 
         <ul class="nav-links" id="nav-links">
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <!-- <li>
-            <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">
-              <span class="moon-icon">🌙</span>
-            </button>
-          </li> -->
+          <li><a href="portfolio.html" data-i18n="nav_portfolio">Portfolio</a></li>
+          <li><a href="about.html" data-i18n="nav_about">About</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+          <li><div class="lang-toggle"><button id="lang-nl" class="lang-active">NL</button><button id="lang-en">EN</button></div></li>
         </ul>
       </nav>
     </header>
+    <div class="menu-overlay" id="menu-overlay"></div>
 
     <section class="work">
-      <h2>Selected<span class="gradient-text"> work</span></h2>
-      <div class="work-grid">
+      <h2 data-i18n="portfolio_title">Selected<span class="gradient-text"> work</span></h2>
+      <div class="work-grid stagger-children">
         <a class="project-card" href="./projecten/project1.html">
           <img
-            src="./images/mockup-sportpoeder.png"
+            src="./images/sportpoeder-workout-tracker/mockup.png"
             alt=""
             class="project-image"
           />
 
           <div class="project-content">
-            <small class="project-tag">PRODUCT DESIGN</small>
-            <h3 class="project-title">Workout Tracker - Sportpoeder</h3>
+            <small class="project-tag" data-i18n="tag_product_design">PRODUCT DESIGN</small>
+            <h3 class="project-title" data-i18n="project_sportpoeder">Workout Tracker - Sportpoeder</h3>
           </div>
         </a>
-        <a class="project-card" href="">
+        <a class="project-card" href="./projecten/project2.html">
           <img
-            src="./images/redesign-visuals-p1.jpg"
+            src="./images/app-slechtzienden/laptop.png"
             alt=""
             class="project-image"
           />
 
           <div class="project-content">
-            <small class="project-tag">UX/UI DESIGN</small>
-            <h3 class="project-title">Redesign Nav - P1 Travel</h3>
+            <small class="project-tag">ACCESSIBILITY · WEB APP</small>
+            <h3 class="project-title">App voor Slechtzienden</h3>
           </div>
         </a>
-        <a class="project-card" href="">
+        <a class="project-card" href="./projecten/project3.html">
           <img
-            src="./images/mockup-spotify-cover.jpg"
+            src="./images/harder-coaching/laptop.png"
             alt=""
             class="project-image"
           />
 
           <div class="project-content">
-            <small class="project-tag">DESIGN</small>
-            <h3 class="project-title">Design Spotify Cover</h3>
+            <small class="project-tag">BRANDING · WEB DESIGN</small>
+            <h3 class="project-title">Harder Coaching</h3>
           </div>
         </a>
-        <a class="project-card" href="">
+        <a class="project-card" href="./projecten/project4.html">
           <img
-            src="./images/opschonen-plattegrond.jpg"
+            src="./images/opschonen-plattegrond/cover.png"
             alt=""
             class="project-image"
           />
 
           <div class="project-content">
-            <small class="project-tag">GRAPHIC DESIGN</small>
-            <h3 class="project-title">Cleanup Floorplan</h3>
+            <small class="project-tag" data-i18n="tag_graphic_design">GRAPHIC DESIGN</small>
+            <h3 class="project-title">Naupar Plattegrond</h3>
           </div>
         </a>
-        <a class="project-card" href="">
+        <a class="project-card" href="./projecten/project5.html">
           <img
-            src="./images/krukkert-loodgieters-mockup.jpg"
+            src="./images/ns-belasting/laptop.png"
             alt=""
             class="project-image"
           />
 
           <div class="project-content">
-            <small class="project-tag">BRANDING</small>
-            <h3 class="project-title">Logo Design + Huisstijl</h3>
+            <small class="project-tag">WEB DEVELOPMENT · FORMS</small>
+            <h3 class="project-title">NS Belastingformulier</h3>
           </div>
         </a>
-        <a class="project-card" href="">
+        <a class="project-card" href="./projecten/project6.html">
           <img
-            src="./images/mockup-spotify-cover.jpg"
+            src="./images/p1-navbar/NavP1.jpg"
             alt=""
             class="project-image"
           />
 
           <div class="project-content">
-            <small class="project-tag">DESIGN</small>
-            <h3 class="project-title">Spotify Cover</h3>
+            <small class="project-tag">UX/UI · USER RESEARCH</small>
+            <h3 class="project-title">P1 Travel Navbar</h3>
           </div>
         </a>
       </div>
     </section>
 
-    <section class="contact-section">
+    <section class="contact-section reveal">
       <div class="contact-card">
-        <h3>Ready to work together?</h3>
-        <p>Tell me about your project</p>
-        <a href="contact.html">Let's talk</a>
+        <h3 data-i18n="cta_title">Ready to work together?</h3>
+        <p data-i18n="cta_subtitle">Tell me about your project</p>
+        <a href="contact.html" data-i18n="cta_button">Let's talk</a>
       </div>
     </section>
 
     <footer>
-      <div class="footer-copyright">
+      <div class="footer-copyright" data-i18n="footer_copyright">
         © 2026 Koppert Media & Design. All rights reserved.
       </div>
-      <div class="linkedin-footer">
+      <div class="footer-right">
         <a
           href="http://www.linkedin.com/in/thijs-koppert-532212280"
           target="_blank"
+          aria-label="LinkedIn"
         >
           <svg
-            width="31"
-            height="31"
+            width="24"
+            height="24"
             viewBox="0 0 31 31"
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M26.999 0C29.2082 0 30.999 1.79086 30.999 4V26.999C30.999 29.2082 29.2082 30.999 26.999 30.999H4C1.79086 30.999 0 29.2082 0 26.999V4C0 1.79086 1.79086 0 4 0H26.999ZM4.84277 12.1924V25.5596H10.1543V12.1592L4.84277 12.1924ZM21.1553 11.6426C17.8951 11.6426 17.0129 13.8111 17.001 13.8408L17.0352 12.1592H12.8564L12.7861 25.5439H17.1055V17.334C17.1055 17.334 17.4891 15.2734 19.585 15.2734C21.6649 15.2736 21.9179 17.4059 21.9219 17.4404V25.5439H26.2002V17.0547C25.9237 13.5282 24.4365 11.6427 21.1553 11.6426ZM7.48828 5.50684C6.00407 5.50684 4.79883 6.57177 4.79883 7.88379C4.79895 9.19571 6.00414 10.2568 7.48828 10.2568C8.97232 10.2568 10.1776 9.19572 10.1777 7.88379C10.1777 6.57177 8.97244 5.50689 7.48828 5.50684Z"
-              fill="#currentColor"
+              fill="currentColor"
             />
           </svg>
         </a>
       </div>
     </footer>
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>
