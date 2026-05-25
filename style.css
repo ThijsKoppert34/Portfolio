@@ -508,11 +508,13 @@
       object-fit: cover;
       aspect-ratio: 3/3.5;
       border-radius: var(--border-radius);
-      transition: transform 0.4s ease;
+      filter: grayscale(100%);
+      transition: transform 0.4s ease, filter 0.4s ease;
     }
 
     &:hover img {
       transform: scale(1.02);
+      filter: grayscale(0%);
     }
   }
 
